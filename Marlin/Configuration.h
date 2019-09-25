@@ -36,8 +36,9 @@
  *
  */
 #ifndef CONFIGURATION_H
-#define CONFIGURATION_H
-#define CONFIGURATION_H_VERSION 010109
+  #define CONFIGURATION_H
+  #define CONFIGURATION_H_VERSION 010109
+#endif
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -455,7 +456,7 @@
  *
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
-//#define PREVENT_COLD_EXTRUSION
+#define PREVENT_COLD_EXTRUSION
 #define EXTRUDE_MINTEMP 170
 
 /**
@@ -557,7 +558,7 @@
   #define DELTA_DIAGONAL_ROD 271.5 // mm. From Anycubic Kossle source  
 
   // height from z=0 to home position
-  #define DELTA_HEIGHT 250.00 // // mm. This will be overriden and set in EEPROM when saving Auto Calibrate results
+  #define DELTA_HEIGHT 293.55 // // mm. This will be overriden and set in EEPROM when saving Auto Calibrate results
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // get these from auto calibrate
 
@@ -608,11 +609,11 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // set to true to invert the logic of the probe.
 
 /**
  * Specify Stepper Driver types
@@ -2029,5 +2030,3 @@
 //
 // With this option servos are powered only during movement, then turned off to prevent jitter.
 //#define DEACTIVATE_SERVOS_AFTER_MOVE
-
-#endif // CONFIGURATION_H
